@@ -9,7 +9,9 @@
 #define MAX_LOG_SIZE    4096
 #define LOG_FILE_PATH   "../../log/tcp_server.log"
 
-#define SaveLog(module, format, ...)\
+#define SaveLog(format, ...)\
 {\
-    LogWright(moudle,(CHAR *)__FILE__, (CHAR *)__FUNCTION__, format, ##__VA_ARGS__);\
+    LogWright((CHAR *)__FILE__, (CHAR *)__FUNCTION__, format, ##__VA_ARGS__);\
 }
+
+#endif

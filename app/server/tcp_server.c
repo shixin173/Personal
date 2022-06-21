@@ -2,7 +2,7 @@
 
 VOID main()
 {
-    SaveLog("tcp_server", "Create socket fail\r\n");
+    SaveLog("Create socket fail\r\n");
 }
 
 UINT Socket_Init(VOID)
@@ -11,15 +11,15 @@ UINT Socket_Init(VOID)
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if(sockfd < 0)
     {
-        SaveLog("tcp_server", "Create socket fail\r\n");
+        SaveLog("Create socket fail\r\n");
     }
 }
 
-VOID LogWright(CONST CHAR *pcModule, CHAR *pcFile, CHAR *pcFunc, CONST CHAR *pcFormat)
+VOID LogWright(CHAR *pcFile, CHAR *pcFunc, CONST CHAR *pcFormat)
 {
     va_list argList = {0};
     CHAR *pcFileName = pcFile;
-    CHAR *szLogTemp[MAX_LOG_SIZE];
+    CHAR szLogTemp[MAX_LOG_SIZE];
     FILE *fpLogFile;
     fpLogFile = fopen(LOG_FILE_PATH, "a+");
     if(NULL == fpLogFile)
@@ -27,7 +27,7 @@ VOID LogWright(CONST CHAR *pcModule, CHAR *pcFile, CHAR *pcFunc, CONST CHAR *pcF
         printf("FILE:tcp_server.c LINE:%d fopen error!\r\n",__LINE__);
     }
     va_start(argList, pcFormat);
-    vsprintf(szLogTemp, MAX_LOG_SIZE, pcFormat, argList);
+    vsnprintf(szLogTemp, MAX_LOG_SIZE, pcFormat, argList);
     va_end(argList);
     while(NULL != strstr(pcFileName, "/"))
     {
