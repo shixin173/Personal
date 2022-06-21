@@ -2,17 +2,71 @@
 
 VOID main()
 {
-    int a = 1;
-    SaveLog("Create socket fail,%d\r\n",a);
+    INT sockfd = 0;
+
+    sockfd = Socket_Init(VOID);
+    if(0 > sockfd)
+    {
+        printf("exec failed\r\n");
+        return;
+    }
+    Socket_Process(sockfd);
 }
 
-UINT Socket_Init(VOID)
+INT Socket_Init(VOID)
 {
-    UINT sockfd = 0;
+    INT sockfd = 0;    
+    struct sockaddr_in ServerAddr = {0};
+    
+    memset(&ServerAddr, 0, sizeof(ServerAddr));
+    
+
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if(sockfd < 0)
+    if(0 > sockfd)
     {
-        SaveLog("Create socket fail\r\n");
+        SaveLog("ERROR:Create socket fail\r\n");
+        return -1;
+    }
+
+    ServerAddr.sin_family = AF_INET;
+    ServerAddr.sin_port = htons(SERVER_PORT);
+    ServerAddr.sin_addr.s_addr = inet_addr("0.0.0.0");
+    if(0 > bind(sockfd, (struct sockaddr*)&Server_Addr),sizeof(Server_Addr))
+    {
+        SaveLog("ERROR:Bind failed\r\n");
+        return -1;
+    }
+    if(0 < listen(sockfd,SERVER_MAX_CON))
+    {
+        SaveLog("ERROR:Listen failed\r\n");
+        return -1;
+    }
+    return sockfd;
+}
+
+VOID Socket_Process(INT sockfd)
+{
+    INT connfd = 0;
+    ULONG ulNameLen = 0;
+    struct sockaddr ClientAddr = {0};
+    struct sockaddr_in ClientAddrIn = {0};
+
+    memset(&ClientAddr, 0, sizeof(ClientAddr));
+    memset(&ClientAddrIn, 0, sizeof(ClientAddrIn));
+    ulNameLen = sizeof(struct sockaddr);
+
+    while(1)
+    {
+        connfd = accept(sockfd, NULL, NULL);
+        if(0 > connfd)
+        {
+            SaveLog("ERROR:accept failed\r\n");
+        }
+        if(0 == getsockname(connfd, &ClientAddr, (socklen_t *)&ulNameLen))
+        {
+            memcpy(&ClientAddrIn, &ClientAddr, ulNameLen);
+            SaveLog("INFO:Client connect,IP:%s:%d",inet_ntoa(ClientAddrIn.sin_addr),ntohs(ClientAddrIn.sin_port));
+        }
     }
 }
 

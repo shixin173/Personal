@@ -16,5 +16,6 @@
 
 UINT Socket_Init(VOID);
 VOID LogWright(CHAR *pcFile, CHAR *pcFunc, INT iLine , CONST CHAR *pcFormat, ...);
+INT  Socket_Init(VOID);
 
 #endif
