@@ -25,6 +25,7 @@ VOID LogWright(CHAR *pcFile, CHAR *pcFunc, CONST CHAR *pcFormat)
     if(NULL == fpLogFile)
     {
         printf("FILE:tcp_server.c LINE:%d fopen error!\r\n",__LINE__);
+        return;
     }
     va_start(argList, pcFormat);
     vsnprintf(szLogTemp, MAX_LOG_SIZE, pcFormat, argList);

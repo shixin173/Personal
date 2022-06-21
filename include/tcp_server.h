@@ -7,7 +7,7 @@
 #define SERVER_MAX_CON  100
 #define SERVER_IP       "116.205.242.50"
 #define MAX_LOG_SIZE    4096
-#define LOG_FILE_PATH   "../../log/tcp_server.log"
+#define LOG_FILE_PATH   "../log/tcp_server.log"
 
 #define SaveLog(format, ...)\
 {\
