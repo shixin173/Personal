@@ -4,7 +4,7 @@ VOID main()
 {
     INT sockfd = 0;
 
-    sockfd = Socket_Init(VOID);
+    sockfd = Socket_Init();
     if(0 > sockfd)
     {
         printf("exec failed\r\n");
@@ -13,7 +13,7 @@ VOID main()
     Socket_Process(sockfd);
 }
 
-INT Socket_Init(VOID)
+INT Socket_Init()
 {
     INT sockfd = 0;    
     struct sockaddr_in ServerAddr = {0};
@@ -31,7 +31,7 @@ INT Socket_Init(VOID)
     ServerAddr.sin_family = AF_INET;
     ServerAddr.sin_port = htons(SERVER_PORT);
     ServerAddr.sin_addr.s_addr = inet_addr("0.0.0.0");
-    if(0 > bind(sockfd, (struct sockaddr*)&Server_Addr),sizeof(Server_Addr))
+    if(0 > bind(sockfd, (struct sockaddr*)&ServerAddr),sizeof(ServerAddr))
     {
         SaveLog("ERROR:Bind failed\r\n");
         return -1;

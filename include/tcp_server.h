@@ -14,8 +14,8 @@
     LogWright((CHAR *)__FILE__, (CHAR *)__FUNCTION__, (INT)__LINE__, format, ##__VA_ARGS__);\
 }
 
-UINT Socket_Init(VOID);
+INT  Socket_Init();
 VOID LogWright(CHAR *pcFile, CHAR *pcFunc, INT iLine , CONST CHAR *pcFormat, ...);
-INT  Socket_Init(VOID);
+VOID Socket_Process(INT sockfd);
 
 #endif
