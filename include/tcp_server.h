@@ -11,10 +11,10 @@
 
 #define SaveLog(format, ...)\
 {\
-    LogWright((CHAR *)__FILE__, (CHAR *)__FUNCTION__, (CHAR *)__LINE__, format, ##__VA_ARGS__);\
+    LogWright((CHAR *)__FILE__, (CHAR *)__FUNCTION__, (INT)__LINE__, format, ##__VA_ARGS__);\
 }
 
 UINT Socket_Init(VOID);
-VOID LogWright(CHAR *pcFile, CHAR *pcFunc,CHAR *pcLine , CONST CHAR *pcFormat, ...);
+VOID LogWright(CHAR *pcFile, CHAR *pcFunc, INT iLine , CONST CHAR *pcFormat, ...);
 
 #endif
