@@ -2,7 +2,8 @@
 
 VOID main()
 {
-    SaveLog("Create socket fail\r\n");
+    int a = 1;
+    SaveLog("Create socket fail,%d\r\n",a);
 }
 
 UINT Socket_Init(VOID)
@@ -15,10 +16,10 @@ UINT Socket_Init(VOID)
     }
 }
 
-VOID LogWright(CHAR *pcFile, CHAR *pcFunc, CONST CHAR *pcFormat, ...)
+VOID LogWright(CHAR *pcFile, CHAR *pcFunc, CHAR *pcLine, CONST CHAR *pcFormat, ...)
 {
     va_list argList = {0};
-    CHAR szLogTemp[MAX_LOG_SIZE];
+    CHAR *pcLogTemp = NULL;
     FILE *fpLogFile;
     fpLogFile = fopen(LOG_FILE_PATH, "a+");
     if(NULL == fpLogFile)
@@ -26,8 +27,18 @@ VOID LogWright(CHAR *pcFile, CHAR *pcFunc, CONST CHAR *pcFormat, ...)
         printf("FILE:tcp_server.c LINE:%d fopen error!\r\n",__LINE__);
         return;
     }
+    pcLogTemp = malloc(MAX_LOG_SIZE);
+    if(NULL == pcLogTemp)
+    {
+    	printf("malloc file\r\n");
+	return;
+    }
     va_start(argList, pcFormat);
-    vsnprintf(szLogTemp, MAX_LOG_SIZE, pcFormat, argList);
+    printf("%s\r\n",pcFormat);
+    vsnprintf(pcLogTemp, MAX_LOG_SIZE, pcFormat, argList);
     va_end(argList);
-    fwrite(szLogTemp, MAX_LOG_SIZE, 1,fpLogFile);
+    printf("%s\r\n",pcLogTemp);
+    snprintf(pcLogTemp, sizeof(pcFile) + sizeof(pcFunc) + sizeof(pcLine), "FILE:%s   FUNC:%s  LINE:%s\r\n", pcFile, pcFunc, pcLine);
+    printf("%s\r\n",pcLogTemp);
+    fwrite(pcLogTemp, strlen(pcLogTemp), 1,fpLogFile);
 }
