@@ -1,5 +1,5 @@
-#include "../../include/tcp_server.h"
-#include "../../include/log.h"
+#include "tcp_server.h"
+#include "tcp_server_log.h"
 
 VOID main()
 {
@@ -20,7 +20,6 @@ INT Socket_Init()
     struct sockaddr_in ServerAddr = {0};
     
     memset(&ServerAddr, 0, sizeof(ServerAddr));
-    
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if(0 > sockfd)
@@ -70,6 +69,7 @@ VOID Socket_Process(INT sockfd)
         }
     }
 }
+
 
 
 

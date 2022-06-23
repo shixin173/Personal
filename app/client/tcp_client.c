@@ -1,5 +1,6 @@
-#include "../../include/log.h"
-#include "../../include/tcp_client.h"
+
+#include "tcp_client.h"
+#include "tcp_client_log.h"
 
 VOID main()
 {
@@ -29,3 +30,4 @@ INT ConnectServer()
     SaveLog(MODULE_TCPCLIENT, "INFO:connect server success\r\n");
     return sockfd;
 }
+

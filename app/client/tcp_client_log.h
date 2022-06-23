@@ -1,10 +1,9 @@
-#ifndef _LOG_H_
-#define _LOG_H_
+#ifndef _TCP_SERVER_LOG_H
+#define _TCP_SERVER_LOG_H
 
 #include "common.h"
 
-#define MODULE_TCPSERVER    "tcp_server"
-#define MODULE_TCPCLIENT    "tcp_client"
+#define LOG_FILE_PATH    "../log/tcp_client.log"
 
 #define MAX_LOG_SIZE    4096
 

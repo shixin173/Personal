@@ -12,6 +12,7 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <stdarg.h>
+#include <pthread.h>
 
 #define ERROR_SUCCESS    0UL
 #define ERROR_FAILED     1UL
