@@ -51,6 +51,7 @@ VOID Socket_Process(INT sockfd)
     struct sockaddr ClientAddr = {0};
     struct sockaddr_in ClientAddrIn = {0};
     CHAR *szBuf[1024] = {0};
+    INT iRes = 0;
 
     memset(&ClientAddr, 0, sizeof(ClientAddr));
     memset(&ClientAddrIn, 0, sizeof(ClientAddrIn));
@@ -66,17 +67,19 @@ VOID Socket_Process(INT sockfd)
         if(0 == getsockname(connfd, &ClientAddr, (socklen_t *)&ulNameLen))
         {
             memcpy(&ClientAddrIn, &ClientAddr, ulNameLen);
-            printf("INFO:Client connect,IP:%s:%d",inet_ntoa(ClientAddrIn.sin_addr),ntohs(ClientAddrIn.sin_port));
-            SaveLog("INFO:Client connect\r\n");
-            SaveLog("INFO:Client connect,IP:%s:%d",inet_ntoa(ClientAddrIn.sin_addr),ntohs(ClientAddrIn.sin_port));
+            SaveLog("INFO:Client connect,IP:%s:%d\r\n",inet_ntoa(ClientAddrIn.sin_addr),ntohs(ClientAddrIn.sin_port));
         }
         else
         {
             SaveLog("ERROR:Get client IP address failed\r\n");
         }
-        recv(connfd, szBuf, sizeof(szBuf), 0);
-        printf("Info:Recv buf:%s\r\n",szBuf);
-        SaveLog("Info:Recv buf:%s\r\n",szBuf);
+        iRes = recv(connfd, szBuf, sizeof(szBuf), 0);
+        if(0 > iRes)
+        {
+            SaveLog("ERROR:Recv buf failed,iRes:%d\r\n", iRes);
+            return;
+        }
+        SaveLog("INFO:Recv buf:%s\r\nLen:%d\r\n", szBuf, iRes);
     }
 }
 

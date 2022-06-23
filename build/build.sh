@@ -1,2 +1,2 @@
-gcc ../app/server/*.c -o ../progress/server
-gcc ../app/client/*.c -o ../progress/client
+gcc ../app/server/*.c ../include/*.c -o ../progress/server
+gcc ../app/client/*.c ../include/*.c -o ../progress/client

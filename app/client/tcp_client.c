@@ -5,9 +5,18 @@
 VOID main()
 {
     INT sockfd = 0;
+    INT iRes   = 0;
+    CHAR szBuf[1024] = {"hello"};
 
     sockfd = ConnectServer();
-    send(sockfd, "hello", 5, 0);
+
+    iRes = send(sockfd, szBuf, sizeof(szBuf), 0);
+    if(0 > iRes)
+    {
+        SaveLog("ERROR:Send buf failed,iRes:%d\r\n", iRes);
+        return;
+    }
+    SaveLog("INFO:Send buf:%s\r\nLen:%d\r\n", szBuf, iRes);
 }
 
 INT ConnectServer()
