@@ -6,6 +6,8 @@ VOID LogWright(CHAR *pcModule, CHAR *pcFile, CHAR *pcFunc, INT iLine, CONST CHAR
     CHAR szLogTemp[MAX_LOG_SIZE] = {0};
     CHAR szLogHeader[256] = {0};
     CHAR szLogFilePath[64] = {0};  
+    FILE *fpLogFile;
+    
     va_start(argList, pcFormat);
     printf("%s\r\n",pcFormat);
     vsnprintf(szLogTemp, MAX_LOG_SIZE, pcFormat, argList);
@@ -19,19 +21,15 @@ VOID LogWright(CHAR *pcModule, CHAR *pcFile, CHAR *pcFunc, INT iLine, CONST CHAR
     else
     {
         memcpy(szLogFilePath, sizeof(szLogFilePath), "../../log/log.log");
-    }
-    LogWrightToFile(szLogFilePath, szLogHeader, szLogTemp);
-}
-
-VOID LogWrightToFile(CHAR *pcLogFilePath, CHAR *pcLogHeader, CHAR *pcLogBody)
-{
-    FILE *fpLogFile;
-    fpLogFile = fopen(pcLogFilePath, "a+");
+    }    
+    
+    fpLogFile = fopen(szLogFilePath, "a+");
     if(NULL == fpLogFile)
     {
         printf("FILE:log.c LINE:%d fopen error!\r\n",__LINE__);
         return;
     }
-    fwrite(szLogHeader,strlen(szLogHeader),1,fpLogFile);
+    
+    fwrite(szLogHeader,strlen(szLogHeader), 1,fpLogFile);
     fwrite(szLogTemp, strlen(szLogTemp), 1,fpLogFile);
 }

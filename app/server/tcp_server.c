@@ -32,7 +32,7 @@ INT Socket_Init()
     ServerAddr.sin_family = AF_INET;
     ServerAddr.sin_port = htons(SERVER_PORT);
     ServerAddr.sin_addr.s_addr = inet_addr("0.0.0.0");
-    if(0 > bind(sockfd, (struct sockaddr*)&ServerAddr),sizeof(ServerAddr))
+    if(0 > bind(sockfd, (struct sockaddr*)&ServerAddr,sizeof(ServerAddr)))
     {
         SaveLog(MOUDLE_TCPSERVER, "ERROR:Bind failed\r\n");
         return -1;

@@ -1,2 +1,2 @@
-gcc ../app/server/*.c -o server
-gcc ../app/client/*.c -o client
+gcc ../app/server/*.c ../app/log/*.c -o server
+gcc ../app/client/*.c ../app/log/*.c -o client
