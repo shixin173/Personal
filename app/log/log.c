@@ -13,9 +13,13 @@ VOID LogWright(CHAR *pcModule, CHAR *pcFile, CHAR *pcFunc, INT iLine, CONST CHAR
     va_end(argList);
     snprintf(szLogHeader, sizeof(szLogHeader), "FILE: %s  FUNC: %s  LINE: %d\r\n", pcFile, pcFunc, iLine);
     printf("Running----%d\r\n",__LINE__);  
-    if(0 == strcmp(pcModule,MODULE_TCPSERVER))
+    if(0 == strcmp(pcModule, MODULE_TCPSERVER))
     {
         strcpy(szLogFilePath, "../log/tcp_server.log");
+    }
+    else if(0 == strcmp(pcModule, MODULE_TCPCLIENT))
+    {
+        strcpy(szLogFilePath, "../log/tcp_client.log");
     }
     else
     {

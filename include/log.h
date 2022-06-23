@@ -4,6 +4,7 @@
 #include "common.h"
 
 #define MODULE_TCPSERVER    "tcp_server"
+#define MODULE_TCPCLIENT    "tcp_client"
 
 #define MAX_LOG_SIZE    4096
 

@@ -20,12 +20,12 @@ INT ConnectServer()
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if(sockfd < 0)
     {
-        SaveLog(MODULE_TCPSERVER, "ERROR:Create socket fail\r\n");
+        SaveLog(MODULE_TCPCLIENT, "ERROR:Create socket fail\r\n");
     }
     if(0 > connect(sockfd, (struct sockaddr *)&cli_addr, sizeof(cli_addr)))
     {
-        SaveLog(MODULE_TCPSERVER, "ERROR:connect server failed\r\n");
+        SaveLog(MODULE_TCPCLIENT, "ERROR:connect server failed\r\n");
     }
-    SaveLog(MODULE_TCPSERVER, "INFO:connect server success\r\n");
+    SaveLog(MODULE_TCPCLIENT, "INFO:connect server success\r\n");
     return sockfd;
 }
