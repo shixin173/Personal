@@ -3,7 +3,7 @@
 
 #include "common.h"
 
-#define MOUDLE_TCPSERVER    "tcp_server"
+#define MODULE_TCPSERVER    "tcp_server"
 
 #define MAX_LOG_SIZE    4096
 
