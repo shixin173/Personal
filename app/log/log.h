@@ -1,7 +1,7 @@
 #ifndef _LOG_H_
 #define _LOG_H_
 
-#include "../../include/common.h"
+#include "../../common/common.h"
 
 #define MAX_LOG_SIZE    4096
 

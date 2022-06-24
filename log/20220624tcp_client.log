@@ -18,3 +18,297 @@ Len:1024
 [2022-6-24 11:16:16]  [FILE: ../app/client/tcp_client.c]  [FUNC: main]  [LINE: 18] ------ INFO:Send buf:hello
 Len:1024
 
+[2022-6-24 17:4:8]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 55] ------ INFO:connect server success
+
+[2022-6-24 17:4:8]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:4:9]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:4:10]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:4:11]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:4:12]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:4:13]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:4:14]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:4:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:4:16]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:4:17]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+
+[2022-6-24 17:17:4]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 55] ------ INFO:connect server success
+
+[2022-6-24 17:17:4]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:17:5]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:17:6]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:17:7]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:17:8]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:17:9]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:17:10]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:17:11]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:17:12]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:17:13]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+
+[2022-6-24 17:22:5]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 53] ------ INFO:connect server success
+
+[2022-6-24 17:22:5]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:22:6]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:22:7]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:22:8]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:22:9]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:22:10]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:22:11]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:22:12]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:22:13]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:22:14]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+
+[2022-6-24 17:38:23]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 53] ------ INFO:connect server success
+
+[2022-6-24 17:38:23]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:38:24]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:38:25]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:38:26]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:38:27]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:38:28]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:38:29]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:38:30]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:38:31]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:38:32]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+
+[2022-6-24 17:40:9]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 53] ------ INFO:connect server success
+
+[2022-6-24 17:40:9]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:40:10]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:40:11]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:40:12]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:40:13]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:40:14]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:40:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:40:16]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:40:17]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:40:18]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+
+[2022-6-24 17:40:49]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 53] ------ INFO:connect server success
+
+[2022-6-24 17:40:49]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:40:50]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:40:51]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:40:52]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:40:53]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:40:54]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:40:55]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:40:56]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:40:57]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:40:58]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+
+[2022-6-24 17:42:13]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 53] ------ INFO:connect server success
+
+[2022-6-24 17:42:13]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:1
+
+Len:1024
+
+[2022-6-24 17:42:14]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:2
+
+Len:1024
+
+[2022-6-24 17:42:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:3
+
+Len:1024
+
+[2022-6-24 17:42:16]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:4
+
+Len:1024
+
+[2022-6-24 17:42:17]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:5
+
+Len:1024
+
+[2022-6-24 17:42:18]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:6
+
+Len:1024
+
+[2022-6-24 17:42:19]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:7
+
+Len:1024
+
+[2022-6-24 17:42:20]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:8
+
+Len:1024
+
+[2022-6-24 17:42:21]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:9
+
+Len:1024
+
+[2022-6-24 17:42:22]  [FILE: ../app/client/tcp_client.c]  [FUNC: Client_Process]  [LINE: 29] ------ INFO:Send buf:Client send msg,times:10
+
+Len:1024
+

@@ -1,21 +1,35 @@
 #include "tcp_client.h"
 #include "../log/log.h"
+#include "../../include/tcp.h"
 
 VOID main()
 {
     INT sockfd = 0;
-    INT iRes   = 0;
-    CHAR szBuf[1024] = {"hello"};
+    
 
     sockfd = ConnectServer();
+    Client_Process(sockfd);   
+}
 
-    iRes = send(sockfd, szBuf, sizeof(szBuf), 0);
-    if(0 > iRes)
+VOID Client_Process(INT sockfd)
+{
+    INT i = 0;
+    INT iRes   = 0;
+    CHAR szBuf[1024] = {0};
+
+    while(i++ < 10)
     {
-        SaveLog(MODULE_TCPCLIENT, "ERROR:Send buf failed,iRes:%d\r\n", iRes);
-        return;
+        sprintf(szBuf, "Client send msg,times:%d\r\n", i);
+        iRes = send(sockfd, szBuf, sizeof(szBuf), 0);    
+        if(0 > iRes)
+        {
+            SaveLog(MODULE_TCPCLIENT, "ERROR:Send buf failed,iRes:%d\r\n", iRes);
+            return;
+        }
+        SaveLog(MODULE_TCPCLIENT, "INFO:Send buf:%s\r\nLen:%d\r\n", szBuf, iRes);
+        sleep(1);
     }
-    SaveLog(MODULE_TCPCLIENT, "INFO:Send buf:%s\r\nLen:%d\r\n", szBuf, iRes);
+    while(1);
 }
 
 INT ConnectServer()
@@ -39,4 +53,5 @@ INT ConnectServer()
     SaveLog(MODULE_TCPCLIENT, "INFO:connect server success\r\n");
     return sockfd;
 }
+
 

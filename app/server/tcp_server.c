@@ -46,16 +46,8 @@ INT Socket_Init()
 
 VOID Socket_Process(INT sockfd)
 {
-    INT connfd = 0;
-    ULONG ulNameLen = 0;
-    struct sockaddr ClientAddr = {0};
-    struct sockaddr_in ClientAddrIn = {0};
-    CHAR *szBuf[1024] = {0};
-    INT iRes = 0;
-
-    memset(&ClientAddr, 0, sizeof(ClientAddr));
-    memset(&ClientAddrIn, 0, sizeof(ClientAddrIn));
-    ulNameLen = sizeof(struct sockaddr);
+    INT connfd = 0; 
+    pthread_t th_process;
 
     while(1)
     {
@@ -64,25 +56,51 @@ VOID Socket_Process(INT sockfd)
         {
             SaveLog(MODULE_TCPSERVER, "ERROR:accept failed\r\n");
         }
-        if(0 == getsockname(connfd, &ClientAddr, (socklen_t *)&ulNameLen))
-        {
-            memcpy(&ClientAddrIn, &ClientAddr, ulNameLen);
-            SaveLog(MODULE_TCPSERVER, "INFO:Client connect,IP:%s:%d\r\n",inet_ntoa(ClientAddrIn.sin_addr),ntohs(ClientAddrIn.sin_port));
-        }
-        else
-        {
-            SaveLog(MODULE_TCPSERVER, "ERROR:Get client IP address failed\r\n");
-        }
-        iRes = recv(connfd, szBuf, sizeof(szBuf), 0);
-        if(0 > iRes)
-        {
-            SaveLog(MODULE_TCPSERVER, "ERROR:Recv buf failed,iRes:%d\r\n", iRes);
-            return;
-        }
-        SaveLog(MODULE_TCPSERVER, "INFO:Recv buf:%s\r\nLen:%d\r\n", szBuf, iRes);
+        /* 连接成功后进入线程 */
+        pthread_create(&th_process, NULL, Server_Process, (VOID *)connfd);
+        
     }
 }
 
+VOID Server_Process(VOID *void_sockfd)
+{
+    INT connfd = 0;
+    struct sockaddr ClientAddr = {0};
+    struct sockaddr_in ClientAddrIn = {0};
+    INT iRes = 0;
+    ULONG ulNameLen = 0;
+    CHAR *szBuf[1024] = {0};
 
+    memset(&ClientAddr, 0, sizeof(ClientAddr));
+    memset(&ClientAddrIn, 0, sizeof(ClientAddrIn));
+    ulNameLen = sizeof(struct sockaddr);
+    connfd = (INT *)void_sockfd;
 
+    if(0 == getsockname(connfd, &ClientAddr, (socklen_t *)&ulNameLen))
+    {
+        memcpy(&ClientAddrIn, &ClientAddr, ulNameLen);
+        SaveLog(MODULE_TCPSERVER, "INFO:Client connect,IP:%s:%d\r\n",inet_ntoa(ClientAddrIn.sin_addr),ntohs(ClientAddrIn.sin_port));
+    }
+    else
+    {
+        SaveLog(MODULE_TCPSERVER, "ERROR:Get client IP address failed\r\n");
+    }
+    while(1)
+    {
+        iRes = recv(connfd, szBuf, sizeof(szBuf), 0);
+        if(0 > iRes)
+        {
+            SaveLog(MODULE_TCPSERVER, "ERROR:Recv buf From %s failed,iRes:%d\r\n", inet_ntoa(ClientAddrIn.sin_addr), iRes);            
+        }
+        else if(iRes > 0)
+        {
+            SaveLog(MODULE_TCPSERVER, "INFO:Recv buf:%s From:%s\r\nLen:%d\r\n", inet_ntoa(ClientAddrIn.sin_addr), szBuf, iRes);
+        }
+        else
+        {
+            SaveLog(MODULE_TCPSERVER, "INFO:Connect From %s stop\r\n", inet_ntoa(ClientAddrIn.sin_addr), szBuf);
+            return;
+        }
+    }
+}
 

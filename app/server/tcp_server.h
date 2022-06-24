@@ -1,7 +1,7 @@
 #ifndef _TCP_SERVER_H_
 #define _TCP_SERVER_H_
 
-#include "../../include/common.h"
+#include "../../common/common.h"
 
 #define SERVER_PORT     14000
 #define SERVER_MAX_CON  100
@@ -10,6 +10,7 @@
 
 INT  Socket_Init();
 VOID Socket_Process(INT sockfd);
+VOID Server_Process(VOID *void_sockfd);
 
 #endif
 
