@@ -94,8 +94,8 @@ VOID Server_Process(VOID *void_sockfd)
         }
         else if(iRes > 0)
         {
-            SaveLog(MODULE_TCPSERVER, "INFO:Recv buf:%s From:%s\r\nLen:%d\r\n", inet_ntoa(ClientAddrIn.sin_addr), szBuf, iRes);
-        }
+            SaveLog(MODULE_TCPSERVER, "INFO:Recv buf:%s From:%s\r\nLen:%d\r\n", szBuf, inet_ntoa(ClientAddrIn.sin_addr), iRes);
+	}
         else
         {
             SaveLog(MODULE_TCPSERVER, "INFO:Connect From %s stop\r\n", inet_ntoa(ClientAddrIn.sin_addr), szBuf);
