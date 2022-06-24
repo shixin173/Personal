@@ -1,0 +1,20 @@
+[2022-6-24 11:16:14]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 39] ------ INFO:connect server success
+
+[2022-6-24 11:16:14]  [FILE: ../app/client/tcp_client.c]  [FUNC: main]  [LINE: 18] ------ INFO:Send buf:hello
+Len:1024
+
+[2022-6-24 11:16:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 39] ------ INFO:connect server success
+
+[2022-6-24 11:16:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: main]  [LINE: 18] ------ INFO:Send buf:hello
+Len:1024
+
+[2022-6-24 11:16:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 39] ------ INFO:connect server success
+
+[2022-6-24 11:16:15]  [FILE: ../app/client/tcp_client.c]  [FUNC: main]  [LINE: 18] ------ INFO:Send buf:hello
+Len:1024
+
+[2022-6-24 11:16:16]  [FILE: ../app/client/tcp_client.c]  [FUNC: ConnectServer]  [LINE: 39] ------ INFO:connect server success
+
+[2022-6-24 11:16:16]  [FILE: ../app/client/tcp_client.c]  [FUNC: main]  [LINE: 18] ------ INFO:Send buf:hello
+Len:1024
+

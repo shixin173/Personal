@@ -1,6 +1,5 @@
-
 #include "tcp_client.h"
-#include "tcp_client_log.h"
+#include "../log/log.h"
 
 VOID main()
 {
@@ -13,10 +12,10 @@ VOID main()
     iRes = send(sockfd, szBuf, sizeof(szBuf), 0);
     if(0 > iRes)
     {
-        SaveLog("ERROR:Send buf failed,iRes:%d\r\n", iRes);
+        SaveLog(MODULE_TCPCLIENT, "ERROR:Send buf failed,iRes:%d\r\n", iRes);
         return;
     }
-    SaveLog("INFO:Send buf:%s\r\nLen:%d\r\n", szBuf, iRes);
+    SaveLog(MODULE_TCPCLIENT, "INFO:Send buf:%s\r\nLen:%d\r\n", szBuf, iRes);
 }
 
 INT ConnectServer()
@@ -31,13 +30,13 @@ INT ConnectServer()
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if(sockfd < 0)
     {
-        SaveLog("ERROR:Create socket fail\r\n");
+        SaveLog(MODULE_TCPCLIENT, "ERROR:Create socket fail\r\n");
     }
     if(0 > connect(sockfd, (struct sockaddr *)&cli_addr, sizeof(cli_addr)))
     {
-        SaveLog("ERROR:connect server failed\r\n");
+        SaveLog(MODULE_TCPCLIENT, "ERROR:connect server failed\r\n");
     }
-    SaveLog("INFO:connect server success\r\n");
+    SaveLog(MODULE_TCPCLIENT, "INFO:connect server success\r\n");
     return sockfd;
 }
 

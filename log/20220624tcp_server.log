@@ -1,0 +1,20 @@
+[2022-6-24 11:16:14]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 70] ------ INFO:Client connect,IP:192.168.0.66:14000
+
+[2022-6-24 11:16:14]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 82] ------ INFO:Recv buf:hello
+Len:1024
+
+[2022-6-24 11:16:15]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 70] ------ INFO:Client connect,IP:192.168.0.66:14000
+
+[2022-6-24 11:16:15]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 82] ------ INFO:Recv buf:hello
+Len:1024
+
+[2022-6-24 11:16:15]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 70] ------ INFO:Client connect,IP:192.168.0.66:14000
+
+[2022-6-24 11:16:15]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 82] ------ INFO:Recv buf:hello
+Len:1024
+
+[2022-6-24 11:16:16]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 70] ------ INFO:Client connect,IP:192.168.0.66:14000
+
+[2022-6-24 11:16:16]  [FILE: ../app/server/tcp_server.c]  [FUNC: Socket_Process]  [LINE: 82] ------ INFO:Recv buf:hello
+Len:1024
+

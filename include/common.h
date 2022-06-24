@@ -13,6 +13,7 @@
 #include <netinet/in.h>
 #include <stdarg.h>
 #include <pthread.h>
+#include <time.h>
 
 #define ERROR_SUCCESS    0UL
 #define ERROR_FAILED     1UL
@@ -31,5 +32,7 @@
 #define VOID        void
 #define STATIC      static
 #define CONST       const
+
+extern INT Exec_Shell(CONST CHAR* pcCmd, CHAR *pcOutBuf, INT iLen);
 
 #endif
